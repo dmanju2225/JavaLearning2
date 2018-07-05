@@ -36,16 +36,22 @@ public class sumOfPairEqualToNumberUsinghashSet {
 		
 		
 		HashSet<Integer> hs = new HashSet<Integer>();
-		
+		int flag=0;
 		for (int i = 0; i < n; i++) {
-				hs.add(a[i]);
+				if(hs.add(a[i])) continue;
+				if(flag!=1){
+				if(x-a[i]==a[i]){
+					System.out.println(a[i]+""+a[i]);
+					flag=1;
+				}
+				}
 		}
 		HashSet<Integer> hs2 = new HashSet<Integer>();
 		
 		Iterator<Integer> it = hs.iterator();
+		
 		while (it.hasNext()) {
 			Integer itr = (Integer) it.next();
-			
 			if (hs2.contains(x - itr)) {
 				System.out.println(itr + "" + (x - itr));
 			}

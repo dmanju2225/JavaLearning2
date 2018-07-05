@@ -17,7 +17,7 @@ public class intToStringConversion {
 	}
 
 	private static void conversion(int num) {
-		//System.out.println(String.valueOf(num)); this is direct inbuilt approach to convert
+		System.out.println(String.valueOf(num)); //this is direct inbuilt approach to convert
 		// TODO Auto-generated method stub
 		StringBuilder sb=new StringBuilder();
 		while(num>0){

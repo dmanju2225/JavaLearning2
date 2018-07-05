@@ -42,15 +42,18 @@ public class MostFrequentChar {
 		Set<Character> set = hm.keySet();
 		Iterator<Character> it = set.iterator();
 		int max = Integer.MIN_VALUE;
+		char maxcr=0;
 
 		while (it.hasNext()) {
 			Character cr = (Character) it.next();
 
 			if (hm.get(cr) > max) {
 				max = hm.get(cr);
+				maxcr=cr;
 
 			}
 		}
+		System.out.println(max+" "+maxcr);
 		Set<Character> set2 = hm.keySet();
 		Iterator<Character> it2 = set.iterator();
 		while (it2.hasNext()) {

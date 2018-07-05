@@ -23,7 +23,10 @@ public class percentageOfCharInString {
 		double countDigits=0;
 		double countSpecial=0;
 		for(int i=0;i<ch.length;i++){       // will go to every character and check for ascii vallues of each
-			if((int)ch[i]>=(int)'A'&&(int)ch[i]<=(int)'Z'){ //comparing ascii of character and ascii of upper letter(A to Z) 
+			//if((int)ch[i]>=(int)'A'&&(int)ch[i]<=(int)'Z'){ //comparing ascii of character and ascii of upper letter(A to Z) 
+			System.out.println(ch[i]+" "+'A');
+			System.out.println((int)ch[i]+" "+(int)'A');
+			if(ch[i]>='A'&&ch[i]<='Z'){
 			countUpper++;                                   //ie 65 to 91(65+26)
 			}
 			else if((int)ch[i]>=(int)'a'&&(int)ch[i]<=(int)'z'){ //comparing ascii of character and ascii of lower letter(a to z) 

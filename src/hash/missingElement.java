@@ -39,9 +39,10 @@ public class missingElement {
 		for(Integer x: al){
 			sum=sum+x;
 		}
-		int n = al.size();
+		int n = al.size()+1;
 		int missNum = ((n*(n+1))/2)-sum;
 		return missNum;
 	}
 
 }
+

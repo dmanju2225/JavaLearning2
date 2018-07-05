@@ -45,6 +45,7 @@ public class descendingCharFreq {
 			char chr = 0;
 			while (it.hasNext()) {
 				Character cr = (Character) it.next();
+				System.out.println(cr);
 				if (hm.get(cr) > max) {
 					max = hm.get(cr);
 					chr = cr;

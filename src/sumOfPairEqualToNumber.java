@@ -24,19 +24,25 @@ public class sumOfPairEqualToNumber {
 	private static void sumOfPair(int[] a, int n, int x) {
 		// TODO Auto-generated method stub
 		int flag = 0;
+		
 		for (int i = 0; i < n; i++) {
+			
+			//if(i>=1 && a[i]==a[i-1]){
+			//	continue;
+			//}
 			for (int j = i + 1; j < n; j++) {
+				
 				if ((a[i] + a[j]) == x) {
 					System.out.println(a[i] + " " + a[j]);
 				}
+				
 				if (a[i] == a[j]) { // if u don't check for this, will get o/p
 					flag = 1;					// redundantly as both the values are
 					break;				// same(running loop again for same number
 									// bot necessary)
-					         // and also o/p will be ex:(1,2) (1,2)...
-					
+					         // and also o/p will be ex:(1,2) (1,2)...	
 				}
-			}
+			}     
 		}
 
 	}

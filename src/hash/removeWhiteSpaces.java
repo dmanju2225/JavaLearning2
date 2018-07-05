@@ -10,20 +10,22 @@ public class removeWhiteSpaces {
 		Scanner scan=new Scanner(System.in);
 		System.out.println("enter a string");
 		String s1=scan.nextLine();
-		//removeSpace(s1); //this method using replaceall method
-		removeSpaces(s1);  //without replaceall
+		//String str=removeSpace(s1); //this method using replaceall method
+		String str1=removeSpaces(s1);  //without replaceall
 	}
 
-	private static void removeSpaces(String s1) {
+	private static String removeSpaces(String s1) {
 		// TODO Auto-generated method stub
 		char[] ch=s1.toCharArray();
-		StringBuffer sb=new StringBuffer();//to build new string
+		//StringBuffer sb=new StringBuffer();//to build new string
+		StringBuilder sb=new StringBuilder();//prefferred
 		for(int i=0;i<s1.length();i++){
 			if(ch[i]!=' '&&ch[i]!='\t'){ //if character is not space and not tab then char will append to new string
 				sb.append(ch[i]);
 			}
 		}
-		System.out.println(sb);
+		//System.out.println(sb);//sysout calls toString()
+		return sb.toString();
 		
 	}
 

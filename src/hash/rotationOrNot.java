@@ -13,6 +13,7 @@ public class rotationOrNot {
 		System.out.println("enter string2");
 		String s2=scan.nextLine();
 		String s3=rotation(s1);
+		System.out.println(s3);
 		String s4=rotation(s3);
 		if(s2.equals(s3)||s2.equals(s4)){
 			System.out.println("s2 is rotation of s1");
@@ -41,5 +42,12 @@ public class rotationOrNot {
 		
 		return s;     // will return the string to calling method s3 first , and s4 second
 	}
+	//static boolean areRotations(String str1, String str2)
+	/*{geeks for geeks, above solution is wrong
+		// There lengths must be same and str2 must be 
+		// a substring of str1 concatenated with str1. 
+		return (str1.length() == str2.length()) &&
+			((str1 + str1).indexOf(str2) != -1);
+	}*/
 
 }

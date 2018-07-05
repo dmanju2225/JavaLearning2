@@ -31,6 +31,7 @@ public class firstRepeatedNnonRepeated {
 				tm.put(ch[i],1);
 			}
 		}
+		System.out.println(tm);
 	}
 	private static void firstNonRepeated(char[] ch) {
 		// TODO Auto-generated method stub
@@ -44,6 +45,7 @@ public class firstRepeatedNnonRepeated {
 				hm2.put(ch[i],1);
 			}
 		}
+		System.out.println(hm2);
 		for(int i=0;i<ch.length;i++){
 			if(hm2.get(ch[i])==1){
 				System.out.println("first non repeated character is "+ch[i]);

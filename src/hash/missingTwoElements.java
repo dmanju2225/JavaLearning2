@@ -22,8 +22,8 @@ public class missingTwoElements {
 		ArrayList<Integer> Missing = method(al, n);
 		System.out.println(Missing);
 		//ArrayList<Integer> Missing2 = method1(al, n);
-		//Set<Integer> Missing3 = method2(al, n);
-		//System.out.println(Missing3);
+		Set<Integer> Missing3 = method2(al, n);
+		System.out.println(Missing3);
 	}
 
 	private static ArrayList<Integer> method(ArrayList<Integer> al, int n) {

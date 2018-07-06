@@ -70,7 +70,8 @@ class CharFreq implements Comparable<CharFreq>
 	public int compareTo(CharFreq arg0)
 	{
 		// TODO Auto-generated method stub
-		return Integer.compare(this.freq, arg0.freq);
+		return Integer.compare(this.freq, arg0.freq);//priority queue calling compare method like 
+		//cf1.compareTo(cf2) so this refers to cf1 becoz calling with cf1
 	}	
 	public String toString()
 	{

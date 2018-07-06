@@ -65,7 +65,7 @@ public class PriorityQueueTopKFreqIntegers
 		}
 				//System.out.println(pq.peek().ch +  " " +pq.peek().freq );	
 		//System.out.println(pq);
-		for(int[] d : pq)
+		for(int[] d : pq)// tp print iterate over pq that is list of arrays, each array contains element and count
 		{
 			System.out.println(d[0]+ " "+d[1]);
 		}

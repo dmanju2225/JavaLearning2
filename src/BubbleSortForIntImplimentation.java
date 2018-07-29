@@ -13,7 +13,8 @@ public class BubbleSortForIntImplimentation {
 		for (int i = 0; i < n; i++) {
 			al.add(scan.nextInt());
 		}
-		bubbleSort(al);
+		//bubbleSort(al);
+		ObubbleSort(al);//easy, compare each one with all and swap, O(n2)
 	}
 	private static void bubbleSort(ArrayList<Integer> al) {
 		int flag = 1;
@@ -30,6 +31,18 @@ public class BubbleSortForIntImplimentation {
 		}
 		System.out.println(al);	//				al.set(i, x);// to modify same array list we are setting the values at index		
 	}                           //				al.set(i + 1, y);
+	
+	private static void ObubbleSort(ArrayList<Integer> al) {
+		for(int i=0;i<al.size()-1;i++){
+			for(int j=i+1;j<al.size();j++){
+				if(al.get(i)>al.get(j)){
+					Collections.swap(al,i,j);
+					System.out.println(al);
+				}
+			}
+		}
+		System.out.println(al);
+	}
 	}		
                                                                 
                                                         

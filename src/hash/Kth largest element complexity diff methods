@@ -1,0 +1,23 @@
+time complexity, 1, logN, N, NlogN,N2
+to find Kth largest element simplest is use any quick or merge sort ,sort the array and return n-kth ele
+complexity O(NlogN)
+T(N)=2T(N/2)+N
+2T(N/2) for calling quick sort for left array and right array and N for calculating partitionIndex
+if you expand it it will come T(N/2)s becomes 0 and remaining is N logirthmic times of N : NlogN
+second one is using prority queue, always least element on top while adding every element in array to pq
+and making sure pq always have only k elements, so poll if size greater than K, finally end up with array
+with kth largest element at top and poll and return.
+complexity O(NlogK) which is smaller than O(NlogN)
+adding elements in prority queue is logk, bcoz it operates like binary tree, divide and conquer, height
+of tree is logk
+then for loop O(N) so O(NlogK)
+
+quick select method complexity is 2N which is smallest if no of elements higher
+complexity T(N)=T(N/2)+N
+if u expand a/1-r, r=1/2, it becomes 2N so O(2N)
+
+but for inverted sorted array, 5,4,3,2,1 but u want 1,2,3,4,5 then complexity for quick select is O(N2)
+becoz for every element Ntimes so fo N elements it is N2 so O(N2)
+
+
+

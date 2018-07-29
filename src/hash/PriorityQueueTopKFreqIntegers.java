@@ -44,14 +44,15 @@ public class PriorityQueueTopKFreqIntegers
 			else
 				hm.put(a[i],1);
 		}
-		PriorityQueue<int[]> pq=new PriorityQueue<int[]>(new Comparator<int[]>(){//pq is list of array, 
+		//PriorityQueue<int[]> pq=new PriorityQueue<int[]>(new Comparator<int[]>(){//pq is list of array, 
 			//each box has 2 elements array, for example 1(element)->2(count), 2->3, 3->4
 			//1st box {1,2},2nd box{2,3},3rd box{3,4}, i am comparing 2 boxes with 
 			//their second element that is at index 1
-			@Override
+			PriorityQueue<int[]> pq=new PriorityQueue<int[]>((a1,a2)->Integer.compare(a1[1],a2[1]));
+			/*@Override
 			public int compare(int[] a, int[] b) {//comparing 2 boxes
 				return a[1]-b[1];//comparing with second element in each box nothing but count
-			}});
+			}});*/
 		Set<Integer> hs=hm.keySet();
 		Iterator<Integer> it=hs.iterator();
 		while(it.hasNext())

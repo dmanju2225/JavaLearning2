@@ -12,7 +12,9 @@ public class SelectionSortForIntImplimentation {
 		for (int i = 0; i < n; i++) {
 			al.add(scan.nextInt());
 		}
-		selectionSort(al);
+		//selectionSort(al);
+		OselectionSort(al);//easy, calculate min for remaining array 
+		//,store that index, swap with that index starting from 0,O(n2)
 	}
 	private static void selectionSort(ArrayList<Integer> al) {
 		int n = al.size();                                                       // int max_index=0
@@ -28,15 +30,36 @@ public class SelectionSortForIntImplimentation {
 		}
 		System.out.println(al);
 	}
+	private static void OselectionSort(ArrayList<Integer> al) {
+		int count=0;
+		int min_index=0;
+		int i=0;
+		while(count<al.size()){
+			int min=Integer.MAX_VALUE;
+			for(i=count;i<al.size();i++){
+			if(al.get(i)<min){	
+				min=al.get(i);
+				min_index=i;	
+			}
+		}
+		Collections.swap(al,count,min_index);;
+		count++;
+		
+		/*
+		 * for(int i=0;i<al.size()-1;i++){
+		 * 	int min=Integer.MAX_VALUE;
+			for(int j=i;j<al.size();j++){
+				if(al.get(j)<min){	
+					min=al.get(j);
+					min_index=j;	
+				}
+			}
+			Collections.swap(al,count,min_index);
+			}
+			}
+		 * 
+		 */
+	}
+		System.out.println(al);
 }
-
-
-
-// if(al.get(n-1)==max){
-// n=n-1;
-// continue;
-// }
-// int k=al.get(max_index);
-// int x=al.get(n-1);
-// al.set(n-1,al.get(max_index));
-// al.set(max_index,x);
+}

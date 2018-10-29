@@ -20,7 +20,7 @@ public class quickbasic {
 		int pivot = al.get(end);
 		while(i<= lastIndex)
 		{
-			if(al.get(i)< pivot) {
+			if(al.get(i)<pivot) {
 				i++;
 				continue;
 			}

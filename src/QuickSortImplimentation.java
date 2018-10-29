@@ -32,11 +32,13 @@ public class QuickSortImplimentation
 			return;
 		}
 		int pi = partitionFunction(al, start, end);// pi is partition index
-		if(k==pi){sysout al.get(pi);
-		else if(k<pi){
+		//if(k==pi){sysout al.get(pi);
+		//else if(k<pi){
 		quickSort(al, start, pi - 1);
-		}
-		else if(k>pi){quickSort(al, pi + 1, end);}
+		//}
+		//else if(k>pi){
+			quickSort(al, pi + 1, end);
+		//	}
 	}
 
 	private static int partitionFunction(ArrayList<Integer> al, int start, int end)
